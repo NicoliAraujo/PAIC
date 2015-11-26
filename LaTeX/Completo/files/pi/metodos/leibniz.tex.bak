@@ -1,0 +1,9 @@
+Nascido na cidade de Leipzig, em 1646, Gottfried Wilhelm von Leibniz era filósofo, matemático e conselheiro político, desenvolveu importantes teorias em suas áreas de atuação e é conhecido, ao lado de Isaac Newton, como um dos pais do cálculo moderno, devido suas descobertas sobre o cálculo diferencial. Leibniz faleceu na cidade de Hanover, em 1716 \cite{Look:GottfriedLeibniz}.
+
+Dentre as contribuições de Leibniz para a área da matemática, está a fórmula para aproximação de $\pi$, obtida por volta de 1670. Existe uma grande semelhança a fórmula de Leibniz e a do matemático escocês James Gregory (1638-1675), e portanto, ficou conhecido como fórmula de Gregoryl-Leibniz \cite{Wendpap:AbordagemPi}.
+
+\begin{equation}
+\pi = 4(\frac{1}{1}-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\ldots) =4\sum_{n=0}^{\infty}\frac{(-1)^n}{2n + 1}\label{form:Leibniz}
+\end{equation}
+
+\input{./files/pi/metodos/grafLeibniz}
