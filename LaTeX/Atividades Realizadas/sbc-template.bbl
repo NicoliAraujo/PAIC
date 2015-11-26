@@ -1,0 +1,42 @@
+\begin{thebibliography}{}
+
+\bibitem[dos Santos et~al. 2007]{Santos:Euler}
+dos Santos, C.~P., Neto, J.~P., and Silva, J.~N. (2007).
+\newblock Os quadradis latinos + \textit{Puzzle} hexágono mágico.
+\newblock Disponível em \url{http://jnsilva.ludicum.org/hm2008_9/Livro10.pdf}.
+
+\bibitem[Fraga 2006]{Fraga:NumeroPi}
+Fraga, F.~G. (2006).
+\newblock O número $\pi$.
+\newblock Master's thesis, Universidade Federal de Minas Gerais.
+
+\bibitem[Halfacree and Upton 2012]{Upton:UserGuide}
+Halfacree, G. and Upton, E. (2012).
+\newblock {\em Raspberry Pi: User Guide}.
+
+\bibitem[Holton and Fratangelo 2013]{Holton:RaspArch}
+Holton, J. and Fratangelo, T. (2013).
+\newblock Raspberry pi architecture.
+\newblock Disponível em
+  \url{http://meseec.ce.rit.edu/551-projects/fall2013/2-1.pdf}.
+
+\bibitem[Look 2015]{Look:GottfriedLeibniz}
+Look, B.~C. (2015).
+\newblock Gottfried wilhelm leibniz: German philosopher and mathematician.
+\newblock Disponível em
+  \url{http://global.britannica.com/biography/Gottfried-Wilhelm-Leibniz}.
+
+\bibitem[Santos 2003]{Santos:BreveHistoria}
+Santos, J. (2003).
+\newblock Uma breve história de $\pi$.
+\newblock {\em Gazeta de Matemática}, 145:43--48.
+\newblock Disponível em \url{http://gazeta.spm.pt/getArtigo?gid=80}.
+
+\bibitem[Wendpap et~al. 2008]{Wendpap:AbordagemPi}
+Wendpap, B.~G., Bastiani, F.~D., and Guzzo, S.~M. (2008).
+\newblock Umka abordagem histórico-matemática do númeto pi($\pi$).
+\newblock {\em $XXII$ Semana Acadêmica da Matemática}.
+\newblock Disponível em
+  \url{http://projetos.unioeste.br/cursos/cascavel/matematica/xxiisam/artigos/19.pdf}.
+
+\end{thebibliography}

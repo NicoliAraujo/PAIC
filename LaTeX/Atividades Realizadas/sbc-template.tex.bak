@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage{courier}
+\usepackage[latin1]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{float, cite}
+\usepackage{booktabs}
+\usepackage[bf,sf,footnotesize,indent,justification=centering]{caption}
+\usepackage{framed}
+\usepackage[caption=true,font=footnotesize]{subfig}
+\usepackage{relsize}
+\newcommand\Cpp{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{++}}}\ }
+\captionsetup[subfigure]{justification=centering,labelfont={bf,sf},textfont={bf,sf,footnotesize},singlelinecheck=off,justification=centering}
+\captionsetup[figure]{justification=centering,labelfont={bf,sf},textfont={bf,sf,footnotesize},singlelinecheck=off}
+\captionsetup[table]{justification=centering,labelfont={bf,sf},textfont={bf,sf,footnotesize},singlelinecheck=off,justification=raggedright}
+
+\newcounter{definitionCounter}
+\newenvironment{definition}[1]{
+    \refstepcounter{definitionCounter}
+\vspace{0.35cm}
+\noindent \textbf{Definição \thedefinitionCounter} (\textbf{#1}).
+}{\vspace{0.35cm}}
+
+
+\usepackage{color}
+\usepackage{listings}
+\lstset{language=C++,
+                basicstyle=\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{green}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#},
+                numbers=left,
+                stepnumber=1,
+                firstnumber=1,
+                numberfirstline=true,
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+
+
+
+
+\hyphenation{}
+
+
+\sloppy
+
+\title{Aproximação dos valores de $\pi$\\no Raspberry Pi}
+
+\author{Janderson Lira, Elloá B. Guedes}
+
+\address{Núcleo de Computação\\
+Escola Superior de Tecnologia\\
+Universidade do Estado do Amazonas\\
+Av. Darcy Vargas, 1200 -- Manaus -- Amazonas
+    \email{jnl.eng@uea.edu.br, ebgcosta@uea.edu.br}
+}
+
+
+
+\begin{document}
+\selectlanguage{brazil}
+
+\maketitle
+
+\section{Atividades desenvolvidas}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{NÚMERO $\pi$} & \textbf{Pesquisar} & \textbf{Estudar} & \textbf{Implementar} & \textbf{LaTeX}\\
+\hline
+História de $\pi$ - A.C & ok & ok & ok & ok\\
+\hline
+História de $\pi$ - D.C & ok & ok &  & \\
+\hline
+Mét. Iterativos de $\pi$ & ok & ok & ok & ---\\
+\hline
+Mét. de Monte Carlo & ok &  &  & ---\\
+\hline
+\textbf{RASPBERRY PI} & \textbf{Pesquisar} & \textbf{Estudar} & \textbf{Implementar} & \textbf{LaTeX}\\
+\hline
+Raspberry Pi - Hardware & ok & ok & ok & ok\\
+\hline
+Raspberry Pi - Software & ok & ok &  & \\
+\hline
+Aplicações do Raspberry Pi & ok & ok & ok & ok\\
+\hline
+Testar Mét. Iterativos & ok & ok & Fazendo & ---\\
+\hline
+\textbf{MÉT. ITERATIVOS EM PYTHON} & \textbf{Pesquisar} & \textbf{Estudar} & \textbf{Implementar} & \textbf{LaTeX}\\
+\hline
+Mét. Iterativos - Leibniz & ok & ok & ok & ok\\
+\hline
+Mét. Iterativos - Euler & ok & ok & ok & ok\\
+\hline
+Mét. Iterativos - Chudnovsky & ok & ok & ok & \\
+\hline
+Mét. Iterativos - Wallis & ok & ok & ok & \\
+\hline
+Mét. Iterativos - Ramanujan & ok & ok & ok & \\
+\hline
+\textbf{OUTRAS COISAS} & \textbf{Pesquisar} & \textbf{Estudar} & \textbf{Implementar} & \textbf{LaTeX}\\
+\hline
+Script para geração de gráficos & ok & ok & ok & ---\\
+\hline
+Passar código para Eclipse & ok & ok & Refazer & ---\\
+\hline
+Padrões de Projetos - Facade & ok & ok & Refazer & ---\\
+\hline
+Utilização do GitHub & Fazendo & Fazendo & & ---\\
+\hline
+Biblioteca \textit{mpmath} & Fazendo & Fazendo & & ---\\
+\hline
+\end{tabular}
+
+\end{document}
