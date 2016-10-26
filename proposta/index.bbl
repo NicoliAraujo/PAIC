@@ -1,0 +1,76 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[Abu-Mostafa, Magdon-Ismail e Lin 2012]{Mostafa:LearningData}
+\abntrefinfo{Abu-Mostafa, Magdon-Ismail e Lin}{ABU-MOSTAFA; MAGDON-ISMAIL;
+  LIN}{2012}
+{ABU-MOSTAFA, Y.~S.; MAGDON-ISMAIL, M.; LIN, H.-T. \emph{Learning from Data --
+  A Short Course}. Estados Unidos: {AML} Book, 2012.}
+
+\bibitem[Alpaydin 2010]{Alpayadin:MachineLearning}
+\abntrefinfo{Alpaydin}{ALPAYDIN}{2010}
+{ALPAYDIN, E. \emph{Introduction to Machine Learning}. 2. ed. Cambridge: The
+  {MIT} Press, 2010.}
+
+\bibitem[{ANTAQ} 2013]{ANTAQ:RiosGeral}
+\abntrefinfo{{ANTAQ}}{{ANTAQ}}{2013}
+{{ANTAQ}, A. N. D. T.~A. \emph{Bacia Amazônica -- Plano de Integração
+  Hidroviária}. 2013.}
+
+\bibitem[Faceli et al. 2015]{Lorena:Livro}
+\abntrefinfo{Faceli et al.}{FACELI et al.}{2015}
+{FACELI, K. et al. \emph{Inteligência Artificial -- Uma abordagem de
+  aprendizado de máquina}. Rio de Janeiro: Editora {LTC}, 2015.}
+
+\bibitem[GonÇalves 2001]{Goncalves:Amazonia}
+\abntrefinfo{GonÇalves}{GONÇALVES}{2001}
+{GONÇALVES, C. W.~P. \emph{{A}mazônia, {A}mazônias}. Manaus: Editora Pearson,
+  2001.}
+
+\bibitem[Haykin 2009]{Haykin:NeuralNetworksBook}
+\abntrefinfo{Haykin}{HAYKIN}{2009}
+{HAYKIN, S. \emph{Neural Networks and Learning Machines}. 3. ed. New Jersey:
+  Pearson, 2009.}
+
+\bibitem[INMET 2016]{INMET:Site}
+\abntrefinfo{INMET}{INMET}{2016}
+{INMET. \emph{Instituto {N}acional de {M}eteorologia {INMET}}. 2016.
+  \url{http://www.inmet.gov.br}.
+Acessado em \today.}
+
+\bibitem[Kuwahara, Neto e Abensur 2012]{Kuwahara:Navegabilidade}
+\abntrefinfo{Kuwahara, Neto e Abensur}{KUWAHARA; NETO; ABENSUR}{2012}
+{KUWAHARA, N.; NETO, J.~C. do L.; ABENSUR, T. da C. Modelagem de previsa?o de
+  navegabilidade em rios da amazônia: ferramenta web de suporte aos usua?rios
+  do transporte aquavia?rio.
+\emph{Journal of Transport Literature}, v.~6, n.~3, p. 60--89, 2012.}
+
+\bibitem[Lorrai e Sechi 1995]{Lorrai:RainfallRunoff}
+\abntrefinfo{Lorrai e Sechi}{LORRAI; SECHI}{1995}
+{LORRAI, M.; SECHI, G.~M. Neural nets for modelling rainfall-runoff
+  transformations.
+\emph{Water Resources Management}, v.~9, n.~4, p. 299--313, 1995.}
+
+\bibitem[{M}anaus 2016]{Porto:Institucional}
+\abntrefinfo{{M}anaus}{{M}ANAUS}{2016}
+{{M}ANAUS, P. de. \emph{Porto de {M}anaus -- Institucional}. 2016.
+  \url{http://www.portodemanaus.com.br}.
+Acessado em \today.}
+
+\bibitem[Sousa e Sousa 2010]{Wanderson:Pianco}
+\abntrefinfo{Sousa e Sousa}{SOUSA; SOUSA}{2010}
+{SOUSA, W. dos S.; SOUSA, F. de~A. S.~de. Rede neural artificial aplicada à
+  previsão de vazão da bacia hidrográfica do rio {P}iancó.
+\emph{Revista Brasileira de Engenharia Agrícola e Ambiental}, v.~14, n.~2, p.
+  173--180, 2010.}
+
+\bibitem[Witten, Frank e Hall 2011]{Witten:DataMining}
+\abntrefinfo{Witten, Frank e Hall}{WITTEN; FRANK; HALL}{2011}
+{WITTEN, I.~H.; FRANK, E.; HALL, M.~A. \emph{Data mining : practical machine
+  learning tools and techniques}. 3. ed. Estados Unidos: Elsevier, 2011.}
+
+\end{thebibliography}

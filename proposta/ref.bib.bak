@@ -1,0 +1,79 @@
+@BOOK{Tilborg:Enciclopedia,
+  title = {Encyclopedia Of Cryptography and Security},
+  publisher = {Springer},
+  year = {2005},
+  editor = {Springer},
+  author = {Henk C.A. van Tilborg},
+  owner = {elloa},
+  address = {Estados Unidos},
+  timestamp = {2010.08.24}
+}
+
+@BOOK{Gentle:LivroAmarelo,
+  title = {{R}andom {N}umber {G}eneration and {M}onte {C}arlo {M}ethods},
+  publisher = {Springer},
+  year = {2003},
+  editor = {Springer},
+  author = {James E. Gentle},
+  owner = {elloa},
+  timestamp = {2009.02.11}
+}
+
+@MASTERSTHESIS{Elloa:Dissertacao,
+  AUTHOR =       {Elloá B. Guedes},
+  TITLE =        {Ataques Quânticos a Geradores de Números Pseudo-Aleatórios},
+  SCHOOL =       {Universidade Federal de Campina Grande},
+  YEAR =         {2011}
+}
+
+
+@BOOK{Kalos:MetodosMonteCarlo,
+  AUTHOR =       {Malvin H. Kalos and Paula A. Whitlock},
+  editor =       {Wiley-VCH},
+  TITLE =        {Monte Carlo Methods},
+  PUBLISHER =    {Wiley-VCH},
+  YEAR =         {2008},
+  address =      {Alemanha}
+}
+
+@BOOK{Dunn:ExploringMonteCarlo,
+  AUTHOR =       {William L. Dunn J. Kenneth Shultis},
+  editor =       {Elsevier},
+  TITLE =        {Exploring Monte Carlo Methods},
+  PUBLISHER =    {Elsevier},
+  YEAR =         {2012},
+  address =      {Estados Unidos}
+}
+
+@MISC{Yee:DigitosPi,
+  author =       {Alexander J. Yee and Shigeru Kondo},
+  title =        {12.1 Trillion Digits of Pi},
+  howpublished = {\url{http://www.numberworld.org/misc_runs/pi-12t/}},
+  year =         {2013},
+  note = {Acessado em Abril de 2015}
+}
+
+@MISC{Vu:PiArxiv,
+  author =       {Linda Vu},
+  title =        {Supercomputers crack sixty-trillionth binary digit of Pi-squared},
+  howpublished = {\url{http://phys.org/news/2011-04-supercomputers-sixty-trillionth-binary-digit-pi-squared.html}},
+  year =         {2011},
+  note = {Acessado em Abril de 2015}
+}
+
+@MISC{Raspberry:Fundacao,
+  author =       {Fundação {RASPBERRY PI}},
+  title =        {Fundação Raspberry Pi},
+  howpublished = {\url{https://www.raspberrypi.org/}},
+  year =         {2015},
+  note = {Acessado em Abril de 2015}
+}
+
+@BOOK{Richardson:RaspberryLivro,
+  AUTHOR =       {Matt Richardson and Shawn Wallace},
+  editor =       {O'Reilly},
+  TITLE =        {Getting Started With Raspberry Pi},
+  PUBLISHER =    {O'Reilly},
+  YEAR =         {2013},
+  address =      {Estados Unidos},
+}

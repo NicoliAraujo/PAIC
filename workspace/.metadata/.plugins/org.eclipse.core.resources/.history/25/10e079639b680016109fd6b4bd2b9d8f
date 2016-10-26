@@ -1,0 +1,8 @@
+'''
+Created on 22 de ago de 2016
+
+@author: paic-elloa-janderson
+'''
+from perceptron import Perceptron
+if __name__ == '__main__':
+    

@@ -1,0 +1,96 @@
+Esta seção contempla a fundamentação teórica necessária para embasar a proposta de projeto de pesquisa em questão. Inicialmente, na Seção \ref{sec:fourierClassica} será apresentada uma visão geral da transformada clássica de Fourier, enfatizando o seu histórico e a sua importância. Após esta apresentação, na Seção \ref{sec:fundamentaQtca}, será caracterizado o paradigma da Computação Quântica, incluindo um breve histórico e algumas das contribuições recentes da literatura para esta área. Ao final, na Seção \ref{sec:fourierQuantica},  será mostrada a transformada quântica de Fourier, suas características principais, aplicações e importância nos mais recentes progressos relacionados aos algoritmos quânticos.
+
+\subsection{Transformada Clássica de Fourier} \label{sec:fourierClassica}
+
+Dada a complexidade no tratamento matemático de alguns cálculos, as \emph{transformadas} foram criadas como uma maneira de simplificar a realização dos mesmos, por meio da apresentação do problema em questão sobre um novo ponto de vista.
+
+Algumas transformadas merecem destaque, tais como a Transformada Z e a Transformada de Laplace as quais têm ampla utilização na área de Controle para a construção de sistemas estáveis e de filtros digitais e analógicos \cite{Ogata,Ogata2}.
+
+Uma das transformadas de maior destaque e de grande utilidade na Engenharia Elétrica e na Computação é a \emph{transformada clássica de Fourier}. Ela é a generalização das séries de Fourier que foram desenvolvidas pelo matemático e físico francês Jean-Baptiste Joseph Fourier para o cálculo do fluxo de calor em materiais \cite{Fourier:ArtigoOriginal}.
+
+A transformada discreta de Fourier toma como entrada um vetor de número complexos $\vec{x} = (x_0, x_1, \ldots, x_{N-1})$, em que $N$ é um parâmetro pré-fixado, e produz um vetor \ $\vec{y} = ( y_0, y_1, \ldots, y_{N-1})$, em que cada $y_k$, $k = 0, 1, \ldots, N-1$, tem a seguinte forma:
+
+\begin{equation}
+y_k \equiv \frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}x_j \cdot e^{\frac{2 \cdot \pi \cdot i \cdot j \cdot k}{N}}
+\end{equation}
+
+Por ser amplamente utilizada nas áreas de Ciência e Tecnologia, um dos requisitos para a implementação da transformada de Fourier é que esta seja de ordem polinomial. Em virtude desta necessidade, foi proposta a \emph{transformada rápida de Fourier}, implementada pelo algoritmo de Cooley-Turkey \cite{Cormen}. Esta transformada rápida caracterizou um ganho significativo em relação às implementações anteriores, que eram de ordem exponencial.
+
+A utilização da transformada de Fourier permite determinar qual a distribuição de uma quantidade física com relação a uma freqüência. Esta propriedade é muito usada para a construção de Sistemas de Comunicações, nos quais, por exemplo, deseja-se transmitir uma mensagem sem que a mesma chegue distorcida ou incoerente \cite{Lathi}; e também na concepção de filtros analógicos removedores de ruído \cite{Ogata2}. Outras aplicações da transformada clássica de Fourier são:
+
+\begin{itemize}
+\item No Processamento Digital de Imagens, auxiliando na detecção de bordas, na eliminação de ruído em imagens  \cite{Elloa:Dissertacao}, compondo algoritmos de compressão, rotação e translação \cite{Rao:FFT};
+\item No Processamento Digital de Sinais de Áudio, auxiliando na detecção do timbre da voz humana \cite{Rao:FFT};
+\item Nas Comunicações, compondo filtros que eliminam o ruído, colaborando na realização de modulações \cite{James:StudentsGuideToFourier}, e atuando na decodificação dos códigos Reed-Solomon \cite{Mateer:Tese};
+\item Na Matemática, auxiliando a análise de equações diferenciais \cite{Strauss:AplicacaoFourier}.
+\end{itemize}
+
+\subsection{Computação Quântica} \label{sec:fundamentaQtca}
+
+A primeira noção formal de computação foi capturada pela \emph{máquina de Turing} (MT), um modelo computacional que define como os algoritmos da Computação Clássica devem ser construídos e que ajuda a entender quais os limites desta forma de computação. Segundo Turing, este modelo seria capaz de capturar o significado de realizar uma tarefa por meio de algoritmos, i.e., se um algoritmo pode ser realizado em qualquer tipo de sistema físico, então existe um algoritmo equivalente para a MT. Esta afirmação é a denominada \emph{tese de Church-Turing} \cite{Turing:Entscheidungs}.
+
+Embora fosse capaz de descrever algoritmos para diversos problemas, a MT tinha algumas limitações, especialmente em determinados problemas de ordem prática. Por exemplo, considerando a busca de um elemento em um vetor desordenado de comprimento $n$, a MT necessitaria percorrer, no pior caso, todo o vetor de elementos. Mas, se escolhas aleatórias fossem feitas, na média, o custo para encontrar o elemento desejado cairia para $n/2$ -- embora isto não representasse garantias de não percorrer $n$ elementos.
+
+Diante da possibilidade de ``acelerar'' a resolução de certos problemas, Solovay e Strassen verificaram que a combinação de uma MT com elementos probabilísticos, tais como um gerador de números aleatórios, seria capaz de resolver eficientemente\footnote{Solução eficiente em um modelo computacional diz respeito a existência de um algoritmo de tempo polinomial deste modelo de computação para resolver o dado problema \cite{Toscani:LivroComplexidade}.} problemas que não têm solução eficiente no modelo original de Turing \cite{Solovay:Probab}. Este novo modelo proposto por Solovay e Strassen ficou conhecido como \emph{máquina de Turing probabilística} e levou à extensão da tese de Church-Turing para sua versão forte -- que qualquer processo algorítmico poderia ser simulado eficientemente por uma MT probabilística.
+
+Na tentativa de aproveitar vantagens de determinados fenômenos físicos, tais como a superposição de estados, na aceleração da resolução de determinados problemas, Benioff considerou um modelo de uma MT com uma fita quântica \cite{Benioff:QuantumMachine}. Embora este fosse o primeiro trabalho a utilizar componentes quânticos, não seria possível afirmar que este modelo era, de fato, quântico -- por utilizar estados clássicos, ao ler a fita quântica, a máquina de Benioff fazia com que os estados da fita também se tornassem clássicos. Em virtude disto, a máquina de Benioff era equivalente a uma MT clássica reversível.
+
+Ao tentar simular sistemas quânticos arbitrários, Richard Feynman, em $1982$, provou que nenhuma MT conhecida poderia simular este tipo de sistema de forma eficiente, pois tais simulações poderiam culminar em uma aumento exponencial no número de estados, tornando intratável a realização da computação \cite{Feynman:Simulating}. Este trabalho incentivou a busca por um modelo computacional que superasse esta limitação.
+
+Em $1985$, David Deutsch propôs um modelo computacional baseado inteiramente na Física Quântica -- a Máquina de Turing Quântica \cite{Deutsch:QuantumTheory}. O modelo proposto por Deutsch vêm desencadeando desafios à tese forte de Church-Turing,  pois algoritmos quânticos eficientes foram propostos para problemas que não se conhece solução eficiente na MT probabilística.
+
+Em paralelo à evolução teórica dos modelos computacionais, nos últimos $40$ anos houve uma drástica miniaturização dos componentes computacionais, de acordo com a qual também é possível prever que potencialmente a escala atômica será atingida. A Figura \ref{fig:moore} ilustra esta evolução ao longo do tempo e uma perspectiva de miniaturização até a escala mencionada. Deste ponto de vista, é impossível ignorar os efeitos da Física Quântica, demandando, portanto, o uso da Mecânica Quântica na concepção de algoritmos e dispositivos computacionais.
+
+
+\begin{figure}[ht!]\center
+\includegraphics[scale=.4]{./fig/moore.eps}
+\caption{Perspectiva de miniaturização dos componentes computacionais. O eixo $x$ ilustra o ano e o eixo $y$ a quantidade de elétrons por dispositivo \cite{Imre:QuantumCompECommu}} \label{fig:moore}
+\end{figure}
+
+Portanto, define-se a \emph{Computação Quântica} como o paradigma computacional que leva em conta a física dos dispositivos, ou seja, a Física Quântica, na realização da computação. Diversos algoritmos vêm sendo propostos de acordo com este paradigma. A busca em uma base de dados desordenada \cite{Grover:Busca} e a fatoração \cite{Shor:Fatoracao} foram os algoritmos de maior destaque propostos. Em particular, o algoritmo de Shor poderá se consolidar como uma ameaça à criptografia de chave assimétrica quando computadores quânticos se tornarem escaláveis.
+
+Além destes algoritmos, diversos elementos computacionais conhecidos têm sido ``atualizados'' para o paradigma quântico com ganhos em relação às suas versões clássicas. São exemplos destes elementos: autômatos finitos, caminhantes aleatórios, algoritmos genéticos, redes neurais, gramáticas, dentre outros. Uma síntese dos recentes progressos nesta área pode ser encontrada no artigo de Bacon e van Dam \cite{Bacon:ProgressQuantumAlg}.
+
+
+\subsection{Transformada Quântica de Fourier} \label{sec:fourierQuantica}
+
+A transformação de dados consiste de uma das práticas mais adotadas pela Ciência da Computação e pela Matemática para resolução de problemas. Uma das transformações mais conhecidas denomina-se \emph{Transformada de Fourier}, com diversas aplicações, especialmente na área de Processamento Digital de Sinais.
+
+A \emph{Transformada Quântica de Fourier} (QFT -- \emph{Quantum Fourier Transform}) é o análogo quântico à transformada clássica de Fourier. É implementada por um operador unitário que toma os elementos de uma base ortogonal $\ket{0}, \ket{1}, \ldots, \ket{N-1}$ e produz a seguinte transformação:
+
+\begin{equation}
+\ket{j} \rightarrow \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{\frac{2 \cdot \pi \cdot i \cdot j \cdot k}{N}} \ket{k}
+\end{equation}
+
+Considerando $N = 2^n$, em que $n$ é um inteiro, e a base $\ket{0}, \ket{1}, \ldots, \ket{2^n - 1}$ como a base computacional, é possível denotar a QFT de uma outra forma, comumente utilizada em diversos algoritmos quânticos. Denotando o estado $\ket{j}$ utilizando a notação binária, tem-se $j = j_1 j_2 \ldots j_n$. Mais formalmente, $j = j_1\cdot 2^{n-1} + j_2 \cdot 2^{n-2} + \ldots + j_n \cdot 2^0$. A seguinte notação pode ser utilizada para representar uma fração binária $j = 0.j_l j_{l+1} \ldots j_m$, uma vez que $j= \frac{j_l}{2} + \frac{j_{l+1}}{4} + \ldots + \frac{j_m}{2^{m-l+1}}$ \cite{Chuang:Biblia}.
+
+Deste modo, a QFT pode ser denotada utilizando a representação de produto, como segue:
+
+\begin{equation}
+\ket{j_1, j_2, \ldots j_n} \rightarrow \frac{ \left( \ket{0} + e^{2 \cdot \pi \cdot i \cdot 0.j_n}\ket{1}\right)  \left( \ket{0} + e^{2 \cdot \pi \cdot i \cdot 0.j_{n-1}j_n}\ket{1}\right) \ldots  \left( \ket{0} + e^{2 \cdot \pi \cdot i \cdot 0.j_1 j_2 \ldots j_n}\ket{1}\right)}{2^{\frac{n}{2}}}
+\end{equation}
+
+Além da QFT, define-se a Transformada Quântica de Fourier Inversa, denotada por $QFT^{-1}$, que possui a seguinte atuação:
+
+\begin{equation}
+\frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{\frac{2 \cdot \pi \cdot i  \cdot k \cdot j}{N}} \ket{k} \rightarrow \ket{\tilde{\frac{j}{N}}}
+\end{equation} A inversa da QFT retorna apenas uma estimativa do valor de $j$, pois leva em consideração a melhor fração binária que aproxima este valor \cite{Mosca:QuantumComp}.
+
+Embora muitos conceitos matemáticos estejam envolvidos na caracterização da transformada quântica de Fourier, a sua aplicação na Computação Quântica caracterizou a primeira contribuição significativa em termos de redução de complexidade de tempo, aumentando as evidências de que este paradigma seja mais poderoso que o paradigma clássico, o vigente nos dias atuais. Esta contribuição se deu quando Shor \cite{Shor:Fatoracao}, ao estudar o problema da fatoração, percebeu que poderia conceber um análogo da transformada clássica de Fourier. Ao fazê-lo, definindo a transformada quântica de Fourier, e ao aplicá-lo no problema em questão, obteve um ganho de ordem superpolinomial para o problema da fatoração. Em outros termos, isto significa que computadores quânticos, graças ao uso da transformada quântica de Fourier, podem resolver facilmente o problema da fatoração, ao passo que os computadores clássicos, independentemente da quantidade de recursos, não o fazem de maneira eficiente.
+
+Dado um computador quântico com um número suficiente de qubits, o algoritmo de Shor pode ser utilizado para quebrar esquemas de criptografia de chave pública, amplamente utilizados atualmente, a exemplo do RSA. Este último se baseia na hipóteses de que fatorar números grandes é inviável computacionalmente. Esta hipótese era até então adequada, pois não se conhecia nenhum procedimento computacional capaz de fazê-lo de maneira eficiente. Porém, com a caracterização do algoritmo de Shor, esta segurança tornou-se ameaçada \cite{Chuang:Biblia}.
+
+É importante enfatizar que a transformada quântica de Fourier não foi inicialmente proposta com o intuito de prover um meio de calcular a transformada clássica de Fourier de maneira mais eficiente em um computador quântico, mas sim como um meio de auxiliar na resolução de outros problemas, explorando as vantagens do paralelismo, proporcionando uma computação exponencialmente mais rápida \cite{Imre:QuantumCompECommu}. O próprio Shor utilizou este fato também para resolver o problema do logaritmo discreto \cite{Shor:Fatoracao}, obtendo ganhos similares.
+
+Algumas outras aplicações da transformada quântica de Fourier também merecem destaque, a citar: estimação de fase, cálculo da ordem, busca de período unidimensional e bidimensional \cite{Imre:QuantumCompECommu},  aplicações em ataques quânticos a geradores de números pseudo-aleatórios \cite{Elloa:Mestrado} e também em procedimentos de decodificação para códigos quânticos \cite{Gilson:Decodificacao}. Um \emph{survey} contemplando extensões e outras aplicações da transformada quântica de Fourier pode ser visto no trabalho de Hales \cite{Hales:QFTSurvey}.
+
+
+
+
+
+
+
+
+
+
+

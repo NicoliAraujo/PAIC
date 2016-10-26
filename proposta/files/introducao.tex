@@ -1,0 +1,39 @@
+Para lidar com problemas que não se conhece uma solução analítica, uma estratégia amplamente utilizada é usar dados sobre esse problema na tentativa de elaborar uma solução empírica. Esta abordagem é amplamente utilizada por muitas áreas da Ciência, Engenharia, Economia e outras áreas do conhecimento \cite{Mostafa:LearningData}.
+
+O \emph{Aprendizado de Máquina} (AM) é uma subárea da Inteligência Artificial que lida com a elaboração de soluções empíricas com a utilização de modelos e métodos computacionais que aprendem a partir de dados.  Neste contexto, o termo ``aprender'' adquire uma conotação de aumentar a performance sobre uma tarefa em relação à um momento anterior \cite{Witten:DataMining}.
+
+O AM utiliza-se de teorias estatísticas na elaboração destes modelos e métodos, pois a sua principal tarefa consiste na elaboração de inferências a partir de amostras. Além da Estatística, a Ciência da Computação também possui um papel relevante no Aprendizado de Máquina, pois é necessário construir algoritmos eficientes para diversas tarefas, tais como para lidar com um grande volume de dados, para realizar o treinamento, para inferência, etc \cite{Alpayadin:MachineLearning}.
+
+Em relação aos tipos de tarefas em que se pode aprender com os dados, há duas classificações possíveis: as \emph{tarefas de previsão} e as \emph{tarefas de classificação}. Nas tarefas de previsão, a meta é encontrar um modelo a partir dos dados de treinamento que possa ser utilizado para prever um valor que caracterize um novo exemplo, com base nos valores de seus atributos de entrada. No caso das tarefas de classificação, a meta é explorar ou descrever um conjunto de dados \cite{Lorena:Livro}.
+
+Os modelos e métodos do AM utilizados nas tarefas de natureza preditiva seguem o \emph{paradigma de aprendizado supervisionado}. De acordo com este paradigma, o conjunto de dados contém exemplos explícitos da saída correta para determinadas entradas. No caso das tarefas de classificação, os modelos e métodos seguem o \emph{paradigma de aprendizado não supervisionado}, no qual o objetivo é  detectar espontaneamente padrões ou alguma estrutura a partir da própria entrada \cite{Mostafa:LearningData}.
+
+O ferramental de modelos e métodos utilizados pela AM é extenso. Para as tarefas de previsão, destacam-se as árvores de decisão, as redes neurais, as máquinas de vetores de suporte, os algoritmos genéticos e as redes Bayesianas. No caso das tarefas de classificação, um vasto conjunto de técnicas de agrupamento encontra-se disponível na literatura \cite{Haykin:NeuralNetworksBook}.
+
+Existem várias aplicações bem-sucedidas de técnicas de Aprendizado de Máquina na solução de problemas reais. Algumas das áreas beneficiadas com estas aplicações são: Agropecuária, Bioinformática, Ecologia e Meio Ambiente, Energia, Finanças, Robótica, Medicina, dentre diversas outras \cite{Lorena:Livro}.
+
+No escopo deste projeto de iniciação científica, pretende-se considerar a utilização de uma das técnicas da Aprendizagem de Máquina, as Redes Neurais Artificiais, para lidar com o problema da previsão da cota do Rio Negro. Para tanto, uma visão geral do contexto deste problema será apresentada a seguir.
+
+A Bacia Amazônica é a maior bacia hidrográfica do mundo, com uma área de aproximadamente cinco milhões de quilômetros quadrados. De toda a área, cerca de $60$\% localiza-se em território brasileiro, compreendendo três milhões, oitocentos e cinquenta mil quilômetros quadrados, que representam $45$\% do território nacional \cite{Goncalves:Amazonia}. Os principais rios dessa bacia são: Rio Amazonas, Rio Negro, Rio Solimões, Rio Xingu, Rio Madeira, Rio Tocantins, Rio Japurá, Rio Juruá, Rio Purus, Rio Tapajós, Rio Branco, Rio Jari e Rio Trombetas. Um mapa que enfatiza a parte brasileira da Bacia Amazônia e os rios mencionados pode ser visto na Figura \ref{img:baciaAmazonica}.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{./img/baciaAmazonica}
+\caption{Parte Brasileira da Bacia Amazônica. Fonte: Agência Nacional de Águas}
+\label{img:baciaAmazonica}
+\end{figure}
+
+A Bacia Amazônica possui um papel importante no transporte hidroviário no estado do Amazonas. Em um contexto histório, a malha fluvial desta bacia foi determinante na forma de ocupação e determinou a localização da grande maioria das cidades que se afixaram nas margens dos rios \cite{Kuwahara:Navegabilidade}. Atualmente, esta bacia possui um total de $22$ mil quilômetros navegáveis, sendo utilizados para o transporte de pessoas e mercadorias na região \cite{ANTAQ:RiosGeral}.
+
+O Rio Negro, em particular, é o maior afluente da marquem esquerda do Rio Amazonas. Às suas margens localiza-se a cidade de Manaus, na qual o Porto de Manaus constitui a principal porta de entrada para o Estado do Amazonas. Este rio é navegável por $720$km acima de sua foz. Sua profundidade pode variar drasticamente, especialmente no período de seca, nos quais a profundidade de determinados pontos chega ao nível de apenas $1$ metro. No Porto de Manaus são efetuadas medidas diárias da cota do Rio Negro \cite{Porto:Institucional}. Um registro de várias cotas históricas encontra-se afixado em determinado ponto deste porto, conforme mostra a Figura \ref{img:cotas}.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{./img/cota}
+\caption{Cota do Rio Negro no Porto de Manaus. Fonte: a própria autora.}
+\label{img:cotas}
+\end{figure}
+
+O problema da previsão de dados hidrológicos já foi abordado por diversos trabalhos de Aprendizado de Máquina \cite{Lorrai:RainfallRunoff}, considerando até mesmo bacias hidrográficas de pequeno porte \cite{Wanderson:Pianco}. No caso da Bacia Amazônica, considerando o caso particular do Rio Negro pela sua importância estratégica para a cidade de Manaus, os trabalhos que endereçam a previsão de sua cota e até mesmo a relação desta com a chuva ainda são incipientes e mais pesquisas nesta direção precisam ser realizadas.

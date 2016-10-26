@@ -1,0 +1,19 @@
+'''
+Created on 22 de ago de 2016
+
+@author: paic-elloa-janderson
+'''
+from perceptron import Perceptron
+if __name__ == '__main__':
+    p = Perceptron()
+    p.setValues()
+        n = 0
+        while(n < 2):
+            self.calculateU(n)
+            self.calculateOutput()
+            self.calculateError(n)
+            if(self.error != 0):
+                self.adjustWeigth(n)
+                print("Pesos: ",self.listWeigth)
+                n = -1
+            n = n + 1

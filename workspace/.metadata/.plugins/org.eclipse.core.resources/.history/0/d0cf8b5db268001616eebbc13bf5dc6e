@@ -1,0 +1,148 @@
+'''
+Created on 22 de ago de 2016
+
+@author: paic-elloa-janderson
+'''
+
+class Perceptron(object):
+    
+    def __init__(self):
+        self.weigth = []
+        self.input = []
+        self.output = []        
+        self.bias = 0
+        self.limit = 0
+        self.learningRate = 0
+        self.realOutput = 0
+        self.error = 0
+        self.u = 0
+    
+    def setWeigth(self, n):
+        self.weigth.append(n)
+    
+    def updateWeigth(self, i, n):
+        self.weigth[i] = n
+    
+    def getWeigth(self, i):
+        return (self.weigth[i])
+    
+    def setInput(self, l):
+        self.input.append(l)
+    
+    def getInput(self, i, j):
+        return (self.input[i][j])
+    
+    def getLenInput(self):
+        return (len(self.input[0]))
+    
+    def setOutput(self, n):
+        self.output.append(n)
+    
+    def getOutput(self, i):
+        return (self.getOutput(i))
+ 
+    def setBias(self, n):
+        self.bias = n
+    
+    def getBias(self):
+        return (self.bias)
+    
+    def setLimit(self, n):
+        self.limit = n
+    
+    def getLimit(self):
+        return(self.limit)
+            
+    def setLearningRate(self, n):
+        self.learningRate = n
+    
+    def getLearningRate(self):
+        return (self.learningRate)
+    
+    def setRealOutput(self, n):
+        self.realOutput = n
+    
+    def getRealOutput(self):
+        return(self.realOutput)
+    
+    def setError(self, n):
+        self.error = n
+        
+    def getError(self):
+        return (self.error)
+    
+    def setU(self, n):
+        self.u = n
+    
+    def getU(self):
+        return (self.u)
+     
+    def setValues(self):
+        n = int(input("Quantidade de entradas: "))
+        m = int(input("Quantidade de valores das entradas: "))
+        for i in range(0, n):
+            print("Entrada ",i)
+            l = []
+            for j in range(0, m):
+                if(j == 0):
+                    self.setBias(int(input("Bias: ")))
+                    l.append(self.getBias())
+                else:
+                    l.append(int(input("Valor ",j,": ")))
+            self.setInput(l)
+        print("Saidas")
+        for i in range(0, n):
+            self.setOutput(int(input("Saida ",i,": ")))
+        print("Pesos")
+        for i in range(0, n):
+            self.setWeigth(int(input("Peso ",i,": ")))
+        self.setLearningRate(int(input("Taxa de aprendizado: ")))
+        self.setLimit(int(input("Limite entre as classes: ")))
+    
+    def calculateU(self, n):
+        aux = 0
+        for i in range(self.getLenInput()):
+            aux = aux + (self.getWeigth(i)*self.getInput(n, i))
+        self.setU(aux)
+    
+    def f(self):
+        if(self.getU() >= self.getLearningRate()):
+            return 1
+        else:
+            return 0
+        
+    def calculateOutput(self):
+        self.setRealOutput(self.f()) 
+    
+    def calculateError(self, n):
+        self.setError = (self.get - self.output)
+    
+    def adjustWeigth(self, n):
+        for i in range(self.getLenInput()):
+            self.setWeigth(i, self.getWeigth(i) + self.getLearningRate * self.getError * self.getInput(n, i)) 
+                    
+    def setValuesManual(self):
+        self.bias = -1
+        self.limit = 0.5
+        self.learningRate = 0.1
+        self.output01 = 1
+        self.output02 = 0
+        self.output = 0
+        self.error = -1
+        self.u = 0
+        self.weigth.append(-0.5441)
+        self.weigth.append(0.5562)
+        self.weigth.append(-0.4074)
+        inputAux = []
+        inputAux1 = []
+        inputAux.append(self.bias)
+        inputAux.append(2)
+        inputAux.append(2)
+        inputAux1.append(self.bias)
+        inputAux1.append(44)
+        inputAux1.append(4)
+        self.input.append(inputAux)
+        self.input.append(inputAux1)
+        
+        
+        

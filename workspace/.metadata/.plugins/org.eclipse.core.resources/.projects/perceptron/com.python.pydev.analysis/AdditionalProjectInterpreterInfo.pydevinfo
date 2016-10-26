@@ -1,0 +1,46 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/paic-elloa-janderson/Dropbox/janderson-paic2016/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/perceptron/com.python.pydev.analysis/v2_indexcache
+perceptron|1471904708000000000|/home/paic-elloa-janderson/Dropbox/janderson-paic2016/workspace/perceptron/perceptron.py
+main|1471906119000000000|/home/paic-elloa-janderson/Dropbox/janderson-paic2016/workspace/perceptron/main.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+10=Perceptron.calculateError
+3=Perceptron
+2=perceptron
+6=Perceptron.setError
+8=Perceptron.setLimit
+9=Perceptron.setRealOutput
+5=Perceptron.setBias
+1=main
+7=Perceptron.setLearningRate
+11=Perceptron.setU
+4=Perceptron.__init__
+-- END DICTIONARY
+-- START TREE 1
+4
+k|1|k!11@
+n|1|n!11@
+p|1|p!11@
+per|1|Perceptron!17@
+-- END TREE
+-- START TREE 2
+16
+__i|1|__init__!3&18@
+adj|1|adjustWeigth!3&18@
+bia|2|bias!4&19@bias!5&19@
+cal|3|calculateU!3&18@calculateOutput!3&18@calculateError!3&18@
+err|2|error!4&19@error!6&19@
+f|1|f!3&18@
+get|10|getLenInput!3&18@getLearningRate!3&18@getU!3&18@getOutput!3&18@getLimit!3&18@getBias!3&18@getWeigth!3&18@getRealOutput!3&18@getInput!3&18@getError!3&18@
+inp|1|input!4&19@
+lea|2|learningRate!4&19@learningRate!7&19@
+lim|2|limit!4&19@limit!8&19@
+out|1|output!4&19@
+rea|2|realOutput!4&19@realOutput!9&19@
+set|12|setValuesManual!3&18@setInput!3&18@setOutput!3&18@setLearningRate!3&18@setLimit!3&18@setBias!3&18@setRealOutput!3&18@setError!10&19@setValues!3&18@setU!3&18@setWeigth!3&18@setError!3&18@
+u|2|u!4&19@u!11&19@
+upd|1|updateWeigth!3&18@
+wei|1|weigth!4&19@
+-- END TREE

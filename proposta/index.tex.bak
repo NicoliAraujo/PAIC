@@ -1,0 +1,68 @@
+\documentclass[times,a4paper,titlepage,12pt]{article}
+
+\usepackage{anysize}
+\marginsize{30mm}{20mm}{30mm}{20mm}
+
+\usepackage{times}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage[alf]{abntex2cite}
+\setcounter{tocdepth}{2}
+\linespread{1.1}
+
+% Para colocar a numeração das páginas do lado direito inferior
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R]{\footnotesize \thepage\ }
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headwidth}{\marginparsep}\addtolength{\headwidth}{\marginparwidth}\headwidth
+= \textwidth
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\hyphenation{David Ma-te-má-ti-ca e-xem-plo pro-por-ciona-rão constru-ção tecno-lo-gias com-preen-são com-preen-dem feitas reunião Fourier preocu-pa-ções}
+
+\begin{document}
+\input{./files/capa}
+
+\pagestyle{fancy}
+
+\tableofcontents
+\newpage
+
+\section{Introdução}
+\input{./files/introducao}
+
+\section{Justificativa} \label{sec:justificativa}
+\input{./files/justificativa}
+
+\section{Objetivos} \label{sec:objetivos}
+\input{./files/objetivos}
+
+\section{Metodologia} \label{sec:metodologia}
+\input{./files/metodologia}
+
+\section{Cronograma das Atividades} \label{sec:cronograma}
+\input{./files/cronograma}
+
+
+\addcontentsline{toc}{section}{Referências}
+\bibliography{ref}
+
+\appendix
+
+%% Máximo: 4 páginas
+%\newpage
+%\section{Plano de Atividades do Bolsista} \label{sec:apendice}
+%\input{./files/plano}
+
+\end{document}
+

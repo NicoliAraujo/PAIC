@@ -1,0 +1,23 @@
+'''
+Created on 22 de ago de 2016
+
+@author: paic-elloa-janderson
+'''
+from perceptron import Perceptron
+if __name__ == '__main__':
+    p = Perceptron()
+    p.setValues()
+    print("Foi")
+    n = 0
+    while(n < 2):
+        p.calculateU(n)
+        p.calculateOutput()
+        p.calculateError(n)
+        print("U: ",p.getU())
+        print("RealOutput: ",p.getRealOutput())
+        print("Erro: ",p.getError())
+        if(p.getError() != 0):
+            p.adjustWeigth(n)
+            print("Pesos: ",p.weigth)
+            n = -1
+        n = n + 1
