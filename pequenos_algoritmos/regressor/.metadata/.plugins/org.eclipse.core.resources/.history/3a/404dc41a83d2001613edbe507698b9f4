@@ -1,0 +1,9 @@
+import pandas as pd
+import scipy.stats as stats
+import itertools
+from sklearn.neural_network.multilayer_perceptron import MLPRegressor
+from sklearn.metrics import mean_squared_error as mse
+from sklearn.metrics import mean_absolute_error as mae
+
+class CheiaRegressor(object):
+    

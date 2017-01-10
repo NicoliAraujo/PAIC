@@ -1,0 +1,44 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/paic-elloa-janderson/git/PAIC/pequenos_algoritmos/regressor/.metadata/.plugins/org.eclipse.core.resources/.projects/PrevisaoCheia/com.python.pydev.analysis/v2_indexcache
+MLPRegressor.__init__|1484068771000000000|/home/paic-elloa-janderson/git/PAIC/pequenos_algoritmos/regressor/PrevisaoCheia/MLPRegressor/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+1=MLPRegressor.__init__
+2=Resultados
+4=CheiaRegressor.__init__
+7=Resultados.set_mse_teste
+3=CheiaRegressor
+8=Resultados.set_mse_treinamento
+5=Resultados.__init__
+6=Resultados.set_mape_teste
+-- END DICTIONARY
+-- START TREE 1
+8
+che|2|CHEIA!11@CheiaRegressor!9@
+max|0|
+mes|1|MES!11@
+n_c|1|n_camadas!11@
+n_n|1|n_nos!11@
+nom|1|NOMEARQ!11@
+r|1|r!11@
+res|1|Resultados!9@
+-- END TREE
+-- START TREE 2
+14
+__i|2|__init__!2&10@__init__!3&10@
+__l|1|__lt__!2&10@
+__r|1|__repr__!2&10@
+aju|1|ajuste_redes!3&10@
+dat|1|data_set!4&11@
+get|4|get_rede!2&10@get_mse_teste!2&10@get_mse_treinamento!2&10@get_mape_teste!2&10@
+map|2|mape_teste!5&11@mape_teste!6&11@
+mse|4|mse_teste!5&11@mse_teste!7&11@mse_treinamento!5&11@mse_treinamento!8&11@
+pre|1|prever_redes!3&10@
+red|2|redes!4&11@rede!5&11@
+res|1|resultado!4&11@
+set|6|set_camadas!3&10@set_rede!2&10@set_mse_teste!2&10@set_mse_treinamento!2&10@set_redes!3&10@set_mape_teste!2&10@
+tes|1|teste!4&11@
+tre|1|treinamento!4&11@
+-- END TREE

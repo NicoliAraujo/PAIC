@@ -1,0 +1,119 @@
+import pandas as pd
+import scipy.stats as stats
+from sklearn.neural_network.multilayer_perceptron import MLPRegressor
+from sklearn.metrics import mean_squared_error as mse
+from sklearn.metrics import mean_absolute_error as mae
+from pandas.io.tests.parser import index_col
+import itertools
+
+"""
+Rede Neural: RN
+"""
+class Resultados():
+    def __init__(self, rede, treinamento, teste):
+        self.rede = rede
+        self.mse_treinamento = treinamento
+        self.mse_teste = teste
+        self.mape_teste = teste
+    
+    def set_rede(self, rede):
+        def net(self, net):
+            if hasattr(net, 'coefs_') == True:
+                self.__net = net
+            else:
+                print("A rede ainda não foi treinada!")
+    
+    def get_rede(self):
+        return self.rede
+        
+    def set_mse_treinamento(self, treinamento):
+        treinamento_esperado, treinamento_obtido = treinamento
+        self.mse_treinamento = mse(treinamento_esperado, treinamento_obtido)
+    
+    def get_mse_treinamento(self):
+        return self.mse_treinamento
+    
+    def set_mse_teste(self, teste):
+        teste_esperado, teste_obtido = teste
+        self.mse_teste = mse(teste_esperado, teste_obtido)
+    
+    def get_mse_teste(self):
+        return self.mse_teste
+    
+    def set_mape_teste(self, teste):
+        teste_esperado, teste_obtido = teste
+        self.mape_teste = 100*mae(teste_esperado, teste_obtido)
+    
+    def __repr__(self):
+                
+        
+
+class CheiaRegressor(object):        
+    
+    def __init__(self, nomeArq, n_camadas, n_nos):
+        self.data_set = pd.read_csv(nomeArq, index_col = 0)
+        entrada = self.data_set.columns[1:]
+        saida = self.data_set.columns[0]
+        self.treinamento = {'in': self.data_set.loc[1962:2000][entrada],
+                            'out':self.data_set.loc[1962:2000][saida]}
+        self.teste = {'in':self.data_set.loc[2001:2013][entrada],
+                      'out':self.data_set.loc[2001:2013][saida]}
+        self.redes = self.set_redes(n_camadas, n_nos)
+        self.resultado = []
+        
+    def set_camadas(self,n_camadas, n_nos):
+        """
+        Inicializa as camadas a serem usadas pelas RNs
+
+        camadas = []
+        nos = []
+        for i in range(1,n_nos+1):
+            nos.append(i)
+        for i in range(0,n_camadas):
+            if(i != n_camadas-1):
+                camadas.append(nos)
+            else:
+                camadas.append(1)
+        return camadas
+        """
+        layers = []
+        nodelist = [i for i in range(1,n_nos+1)]
+        layers.append(itertools.product(nodelist, nodelist, repeat=1))
+        layers.append(itertools.product(nodelist, repeat=1))
+        return layers
+    
+    def set_redes(self,n_camadas, n_nos):
+        """
+        Inicializa as redes neurais
+        """
+        redes_neurais = []
+        hidden_layers = self.set_camadas(n_camadas, n_nos)
+        for camada in hidden_layers:
+            for no in camada:
+                for funcAct in ['logistic', 'tanh']:
+                    for alphaX in [0.0001, 0.01]:
+                        for taxaAprendizado in [0.001,0.003]:
+                            for fracValid in [0.1,0.0462]:
+                                rede = MLPRegressor(hidden_layer_sizes=no,
+                                                       activation=funcAct, solver='sgd',
+                                                       alpha=alphaX,
+                                                       learning_rate_init=taxaAprendizado,
+                                                       verbose=False, early_stopping=True,
+                                                       validation_fraction=fracValid,
+                                                       max_iter=2000)
+                                redes_neurais.append(rede)
+        return redes_neurais
+    
+    def prever_redes(self):
+        for rede in self.redes:
+            result_treinamento = rede.predict(self.treinamento['in'])
+            result_teste = rede.predict(self.teste['in'])
+    
+if __name__ == '__main__':
+    MES = '06'
+    NOMEARQ = '../files/db_' + MES + '.csv'
+    n_camadas = 2
+    n_nos = 7
+    CHEIA = CheiaRegressor(NOMEARQ, n_camadas, n_nos)
+    r = CHEIA.set_redes(n_camadas, n_nos)
+    print("ok")
